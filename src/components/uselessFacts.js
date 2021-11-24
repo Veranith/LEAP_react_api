@@ -35,7 +35,9 @@ class uselessFacts extends Component {
     if (!this.state.error) {
       return (
         <div>
-          <h1>{this.state.facts.text}</h1>
+          <h1>
+            <a href={this.state.facts.source_url}> {this.state.facts.text} </a>
+          </h1>
           <button
             onClick={() => {
               this.getFact();
