@@ -9,12 +9,12 @@ class uselessFacts extends Component {
       error: false,
     };
   }
-  
-  uselessFacts() {
-    this.setState({ facts: [] }); 
-  }
 
   componentDidMount() {
+    this.getFact();
+  }
+
+  getFact() {
     const url = "https://uselessfacts.jsph.pl/random.json?language=en";
 
     fetch(url)
@@ -26,22 +26,28 @@ class uselessFacts extends Component {
       })
       .catch((error) => {
         this.setState({
-          error: true
-        })
+          error: true,
+        });
       });
   }
 
   render() {
-    if(!this.state.error){
+    if (!this.state.error) {
       return (
         <div>
           <h1>{this.state.facts.text}</h1>
-          <button onClick={this.NewFact }>NewFact</button>
+          <button
+            onClick={() => {
+              this.getFact();
+            }}
+          >
+            NewFact
+          </button>
         </div>
       );
-  } else {
-    return <Error />
-  }
+    } else {
+      return <Error />;
+    }
   }
 }
 
