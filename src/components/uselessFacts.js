@@ -35,15 +35,16 @@ class uselessFacts extends Component {
     if (!this.state.error) {
       return (
         <div>
-          <h1>
+          <h2>
             <a href={this.state.facts.source_url}> {this.state.facts.text} </a>
-          </h1>
+          </h2>
           <button
+            className="btn"
             onClick={() => {
               this.getFact();
             }}
           >
-            NewFact
+            New Fact
           </button>
         </div>
       );

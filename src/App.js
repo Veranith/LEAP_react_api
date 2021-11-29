@@ -3,12 +3,13 @@ import UselessFacts from "./components/uselessFacts";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
+    <div className="container">
+      <div className="card">
+        <div className="card-content">
+          <span className="card-title">Useless Fact:</span>
           <UselessFacts />
-        </p>
-      </header>
+        </div>
+      </div>
     </div>
   );
 }
