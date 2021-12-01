@@ -1,5 +1,6 @@
 import "./App.css";
 import UselessFacts from "./components/uselessFacts";
+import Chucknorris from "./components/chucknorris";
 
 function App() {
   return (
@@ -8,6 +9,12 @@ function App() {
         <div className="card-content">
           <span className="card-title">Useless Fact:</span>
           <UselessFacts />
+        </div>
+      </div>
+      <div className="card">
+        <div className="card-content">
+          <span className="card-title">Chuck Norris Jokes:</span>
+          <Chucknorris />
         </div>
       </div>
     </div>
